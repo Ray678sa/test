@@ -1,0 +1,74 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.header h1{
+  font-size: 48px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+.note {
+  font-style: italic;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Layout for the div element having the "row" classes*/
+/* Added declaration so that, for all elements, paddings (etc.) are included in the width.*/
+
+* {
+  box-sizing: border-box;
+}
+/*CSS-definations for row, main and side classes*/
+
+.row {
+  display:flex;
+  flex-wrap: wrap;
+}
+.main {
+  flex: 70%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.side{
+  flex: 30%;
+  background-color: white;
+  padding: 20px;
+}
+/* for the responsiveness, if the screen is samll (width<= 800px), make sure that page elements are
+ laid out in a column (top-bottom) instead of a row(left-right) */
+
+
+@media screen and (max-width: 800px) {
+  .row, .navbar {  
+    flex-direction: column;
+  }
+}
